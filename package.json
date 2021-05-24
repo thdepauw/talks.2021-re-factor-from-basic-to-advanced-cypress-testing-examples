@@ -1,0 +1,25 @@
+{
+  "name": "cypress-example",
+  "version": "1.0.0",
+  "description": "sample cypress standalone setup",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "test": "cypress run -b chrome --headless",
+    "pre-test-ci": "npm run clean-ci && cypress verify",
+    "clean-ci": "rimraf reports/*",
+    "lint-fix": "tslint -p tsconfig.json --fix"
+  },
+  "author": "Thomas De Pauw",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^12.12.26",
+    "cypress": "^7.3.0",
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.1.0",
+    "typescript": "^3.7.5"
+  }
+}
